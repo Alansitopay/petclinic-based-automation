@@ -1,6 +1,9 @@
 package org.springframework.samples.petclinic;
 
 import io.qameta.allure.*;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.testng.Assert;
@@ -10,6 +13,40 @@ import static org.testng.Assert.*;
 @Epic("Model")
 @Feature("Owner Model Unit Tests")
 public class OwnerTest {
+    @Mock
+    private Owner owner;
+
+    private AutoCloseable closeable;
+
+    @BeforeMethod
+    public void setUp(){
+        closeable= MockitoAnnotations.openMocks(this);
+    }
+    @AfterMethod
+    public void tearDown() throws Exception {
+        closeable.close();
+    }
+
+    @Test
+    public void testOwnerMock(){
+        Mockito.when(owner.getFirstName()).thenReturn("Jane");
+        Mockito.when(owner.getLastName()).thenReturn("Perez");
+        Mockito.when(owner.getAddress()).thenReturn("123 aaa");
+        Mockito.when(owner.getCity()).thenReturn("Ciudad");
+
+        Assert.assertEquals(owner.getFirstName(),"Jane");
+        Assert.assertEquals(owner.getLastName(),"Perez");
+        Assert.assertEquals(owner.getAddress(),"123 aaa");
+        Assert.assertEquals(owner.getCity(),"Ciudad");
+
+        Mockito.verify(owner).getFirstName();
+        Mockito.verify(owner).getLastName();
+        Mockito.verify(owner).getAddress();
+        Mockito.verify(owner).getCity();
+    }
+
+
+
     @Test(description = "Should set and get first name")
     @Story("Owner Getter/Setter")
     public void testSetAndGetFirstName() {
