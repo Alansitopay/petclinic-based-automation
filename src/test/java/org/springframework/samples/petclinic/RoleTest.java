@@ -28,7 +28,8 @@ public class RoleTest {
         closeable.close();
     }
 
-    @Test
+    @Test(description = "Role Mock")
+    @Story("Role mock behavior")
     public void testRoleMock() {
         Mockito.when(role.getName()).thenReturn("Admin");
         assertEquals(role.getName(), "Admin");
@@ -37,7 +38,9 @@ public class RoleTest {
 
 
 
-    @Test
+    @Test(description = "Should get and set role information")
+    @Story("Role Setters and getters")
+    @Severity(SeverityLevel.NORMAL)
     public void testGetAndSetters(){
         User user = new User();
         user.setUsername("user");
