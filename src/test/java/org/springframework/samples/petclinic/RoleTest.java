@@ -1,6 +1,9 @@
 package org.springframework.samples.petclinic;
 
 import io.qameta.allure.*;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.samples.petclinic.model.Role;
 import org.springframework.samples.petclinic.model.User;
 import org.testng.annotations.*;
@@ -12,6 +15,28 @@ import static org.testng.Assert.*;
 @Epic("Model")
 @Feature("Role Model Unit Tests")
 public class RoleTest {
+    @Mock
+    private Role role;
+    private AutoCloseable closeable;
+
+    @BeforeMethod
+    public void setUp() {
+        closeable = MockitoAnnotations.openMocks(this);
+    }
+    @AfterMethod
+    public void tearDown() throws Exception {
+        closeable.close();
+    }
+
+    @Test
+    public void testRoleMock() {
+        Mockito.when(role.getName()).thenReturn("Admin");
+        assertEquals(role.getName(), "Admin");
+        Mockito.verify(role).getName();
+    }
+
+
+
     @Test
     public void testGetAndSetters(){
         User user = new User();

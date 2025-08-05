@@ -26,7 +26,7 @@ public class PetTypeTest {
     }
 
     @Test
-    public void testPetTypeName() {
+    public void testPetTypeMock() {
         Mockito.when(petType.getName()).thenReturn("gato");
         assertEquals(petType.getName(), "gato");
         Mockito.verify(petType).getName();
