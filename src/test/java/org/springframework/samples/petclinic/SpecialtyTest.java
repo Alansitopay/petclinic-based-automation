@@ -25,7 +25,8 @@ public class SpecialtyTest {
     public void tearDown() throws Exception {
         closeable.close();
     }
-    @Test
+    @Test(description = "Specialty Mock")
+    @Story("Specialty mock behavior")
     public void testSpecialtyMock() {
         Mockito.when(specialty.getName()).thenReturn("Dentist");
         assertEquals(specialty.getName(), "Dentist");
@@ -33,7 +34,9 @@ public class SpecialtyTest {
     }
 
 
-    @Test
+    @Test(description = "Should set and get specialty name")
+    @Story("Specialty getters and setters")
+    @Severity(SeverityLevel.MINOR)
     public void testSetTypeName (){
         Specialty specialty = new Specialty();
         specialty.setName("Dentist");
