@@ -26,7 +26,8 @@ public class PersonTest {
     }
 
 
-    @Test
+    @Test (description = "Person Mock")
+    @Story("Person mock behavior")
     public void testPersonMock (){
         Mockito.when(person.getFirstName()).thenReturn("Roberto");
         Mockito.when(person.getLastName()).thenReturn("Gutierrez");
@@ -35,13 +36,17 @@ public class PersonTest {
         Mockito.verify(person).getFirstName();
         Mockito.verify(person).getLastName();
     }
-    @Test
+    @Test(description = "Should set and get the first name")
+    @Story("Person getters and setters")
+    @Severity(SeverityLevel.CRITICAL)
     public void testGetFirstName (){
         Person person = new Person();
         person.setFirstName("Roberto");
         Assert.assertEquals(person.getFirstName(),"Roberto");
     }
-    @Test
+    @Test(description = "Should set and get the last name")
+    @Story("Person getters and setters")
+    @Severity(SeverityLevel.CRITICAL)
     public void testGetLastName (){
         Person person = new Person();
         person.setLastName("Gutierrez");
