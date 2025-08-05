@@ -31,7 +31,8 @@ public class VetTest {
     public void tearDown() throws Exception {
         closeable.close();
     }
-    @Test
+    @Test(description = "VetNames Mock")
+    @Story("Vet mock with names behavior")
     public void testVetNameMock() {
         Mockito.when(vet.getFirstName()).thenReturn("VeterinarioN");
         Mockito.when(vet.getLastName()).thenReturn("VeterinarioA");
@@ -40,7 +41,8 @@ public class VetTest {
         Mockito.verify(vet).getFirstName();
         Mockito.verify(vet).getLastName();
     }
-    @Test
+    @Test (description = "Vet Specialty Mock")
+    @Story("Vet specialties mock behavior")
     public void testAddSpecialtyMock() {
         Vet vetSpy = Mockito.spy(new Vet());
 
@@ -55,7 +57,9 @@ public class VetTest {
 
 
 
-    @Test
+    @Test(description = "Should set and get specialty name and ammount")
+    @Story("Vet setters and getters")
+    @Severity(SeverityLevel.CRITICAL)
     public void testAddSpecialty() {
         Vet vet = new Vet();
         assertEquals(vet.getNrOfSpecialties(), 0);
@@ -68,7 +72,9 @@ public class VetTest {
         assertTrue(vet.getSpecialties().contains(specialty));
     }
 
-    @Test
+    @Test(description = "Should retrieve a list of specialties")
+    @Story("Vet Setters and getters ")
+    @Severity(SeverityLevel.MINOR)
     public void testSpecialtyList(){
         Vet vet = new Vet();
 
