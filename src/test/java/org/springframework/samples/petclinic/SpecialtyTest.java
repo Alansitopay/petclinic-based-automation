@@ -31,7 +31,7 @@ public class SpecialtyTest {
         assertEquals(specialty.getName(), "Dentist");
         Mockito.verify(specialty).getName();
     }
-    
+
 
     @Test
     public void testSetTypeName (){
