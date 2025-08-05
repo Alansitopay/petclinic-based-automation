@@ -1,6 +1,9 @@
 package org.springframework.samples.petclinic;
 
 import io.qameta.allure.*;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.samples.petclinic.model.Specialty;
 import org.springframework.samples.petclinic.model.Vet;
 import org.testng.annotations.*;
@@ -15,13 +18,50 @@ import static org.testng.Assert.*;
 @Epic("Model")
 @Feature("Vet Model Unit Tests")
 public class VetTest {
+    @Mock
+    private Vet vet;
+    private AutoCloseable closeable;
+
+    @BeforeMethod
+    public void setUp() {
+        closeable = MockitoAnnotations.openMocks(this);
+    }
+
+    @AfterMethod
+    public void tearDown() throws Exception {
+        closeable.close();
+    }
+    @Test
+    public void testVetNameMock() {
+        Mockito.when(vet.getFirstName()).thenReturn("VeterinarioN");
+        Mockito.when(vet.getLastName()).thenReturn("VeterinarioA");
+        assertEquals(vet.getFirstName(), "VeterinarioN");
+        assertEquals(vet.getLastName(), "VeterinarioA");
+        Mockito.verify(vet).getFirstName();
+        Mockito.verify(vet).getLastName();
+    }
+    @Test
+    public void testAddSpecialtyMock() {
+        Vet vetSpy = Mockito.spy(new Vet());
+
+        Specialty specialty = Mockito.mock(Specialty.class);
+        Mockito.when(specialty.getName()).thenReturn("Radiology");
+        vetSpy.addSpecialty(specialty);
+        
+        assertEquals(vetSpy.getNrOfSpecialties(), 1);
+        assertTrue(vetSpy.getSpecialties().contains(specialty));
+        Mockito.verify(vetSpy).addSpecialty(specialty);
+    }
+
+
+
     @Test
     public void testAddSpecialty() {
         Vet vet = new Vet();
         assertEquals(vet.getNrOfSpecialties(), 0);
 
         Specialty specialty = new Specialty();
-        specialty.setName("Dentistry");
+        specialty.setName("Dentist");
         vet.addSpecialty(specialty);
 
         assertEquals(vet.getNrOfSpecialties(), 1);
