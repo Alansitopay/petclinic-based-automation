@@ -26,7 +26,8 @@ public class UserTest {
     public void tearDown() throws Exception {
         closeable.close();
     }
-    @Test
+    @Test(description = "User Mock")
+    @Story("User mock behavior")
     public void testUserMock() {
         Mockito.when(user.getUsername()).thenReturn("user");
         Mockito.when(user.getPassword()).thenReturn("password");
@@ -38,7 +39,9 @@ public class UserTest {
 
 
 
-    @Test
+    @Test(description = "Should set and get User information")
+    @Story("Getters and setters of User")
+    @Severity(SeverityLevel.CRITICAL)
     public void testGettersYSetters(){
         User user = new User();
         user.setUsername("user");
