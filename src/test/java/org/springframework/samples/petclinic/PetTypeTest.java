@@ -25,7 +25,8 @@ public class PetTypeTest {
         closeable.close();
     }
 
-    @Test
+    @Test(description = "Pet Type Mock")
+    @Story("PetType Mock Behavior")
     public void testPetTypeMock() {
         Mockito.when(petType.getName()).thenReturn("gato");
         assertEquals(petType.getName(), "gato");
@@ -34,7 +35,9 @@ public class PetTypeTest {
 
 
 
-    @Test
+    @Test(description = "Should set and get the petType name")
+    @Story("Setters and Getters of PetType")
+    @Severity(SeverityLevel.NORMAL)
     public void testSetTypeName (){
         PetType type = new PetType();
         type.setName("gato");
