@@ -1,6 +1,9 @@
 package org.springframework.samples.petclinic;
 
 import io.qameta.allure.*;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
@@ -14,6 +17,35 @@ import static org.testng.Assert.*;
 @Epic("Model")
 @Feature("Pet Model Unit Tests")
 public class PetTest {
+    @Mock
+    private Pet pet;
+
+    private AutoCloseable closeable;
+    @BeforeMethod
+    public void setUp() {
+        closeable = MockitoAnnotations.openMocks(this);
+    }
+
+    @AfterMethod
+    public void tearDown() throws Exception {
+        closeable.close();
+    }
+
+    @Test
+    public void TestPetMock(){
+        LocalDate date = LocalDate.of(2020, 1, 1);
+        Mockito.when(pet.getName()).thenReturn("Carlitos");
+        Mockito.when(pet.getBirthDate()).thenReturn(date);
+
+        assertEquals(pet.getName(), "Carlitos");
+        assertEquals(pet.getBirthDate(), date);
+
+        Mockito.verify(pet).getName();
+        Mockito.verify(pet).getBirthDate();
+    }
+
+
+
     @Test
     public void testSetGetBirthDate() {
         Pet pet = new Pet();
