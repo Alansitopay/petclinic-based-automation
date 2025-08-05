@@ -27,7 +27,9 @@ public class OwnerTest {
         closeable.close();
     }
 
-    @Test
+    @Test(description = "Owner Mock")
+    @Story("Owner mock behavior")
+    @Severity(SeverityLevel.NORMAL)
     public void testOwnerMock(){
         Mockito.when(owner.getFirstName()).thenReturn("Jane");
         Mockito.when(owner.getLastName()).thenReturn("Perez");
@@ -49,13 +51,16 @@ public class OwnerTest {
 
     @Test(description = "Should set and get first name")
     @Story("Owner Getter/Setter")
+    @Severity(SeverityLevel.NORMAL)
     public void testSetAndGetFirstName() {
         Owner owner = new Owner();
         owner.setFirstName("Jane");
         assertEquals(owner.getFirstName(), "Jane");
     }
 
-    @Test
+    @Test(description = "Should set and get the rest of the information")
+    @Story("Owner Getters/Setters")
+    @Severity(SeverityLevel.CRITICAL)
     public void testSetAndGetInformation (){
         Owner owner = new Owner();
         owner.setAddress("123 aaa");
@@ -65,7 +70,10 @@ public class OwnerTest {
         Assert.assertEquals(owner.getCity(), "Ciudad");
         Assert.assertEquals(owner.getTelephone(),"1234567890");
     }
-    @Test
+
+    @Test(description = "Should assign a pet to a owner")
+    @Story("owner-pet relationship")
+    @Severity(SeverityLevel.BLOCKER)
     public void testAddPetToOwner(){
         Owner owner = new Owner();
         Pet pet = new Pet();
@@ -77,7 +85,9 @@ public class OwnerTest {
         Assert.assertEquals(owner.getPet("Roberto"),pet);
     }
 
-    @Test
+    @Test(description = "Should retrieve old pet ignoring new pet additions")
+    @Story("owner-pet relationship")
+    @Severity(SeverityLevel.NORMAL)
     public void testGetPetIgnoreNew(){
         Owner owner = new Owner();
         Pet existente = new Pet();

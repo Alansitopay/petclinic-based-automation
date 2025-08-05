@@ -47,7 +47,7 @@ public class VetTest {
         Specialty specialty = Mockito.mock(Specialty.class);
         Mockito.when(specialty.getName()).thenReturn("Radiology");
         vetSpy.addSpecialty(specialty);
-        
+
         assertEquals(vetSpy.getNrOfSpecialties(), 1);
         assertTrue(vetSpy.getSpecialties().contains(specialty));
         Mockito.verify(vetSpy).addSpecialty(specialty);
