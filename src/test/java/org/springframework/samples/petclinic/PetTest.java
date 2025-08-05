@@ -31,7 +31,8 @@ public class PetTest {
         closeable.close();
     }
 
-    @Test
+    @Test(description = "Pet Mock")
+    @Story("Pet Mock behavior")
     public void TestPetMock(){
         LocalDate date = LocalDate.of(2020, 1, 1);
         Mockito.when(pet.getName()).thenReturn("Carlitos");
@@ -46,14 +47,18 @@ public class PetTest {
 
 
 
-    @Test
+    @Test(description = "Should set and get birth date information")
+    @Story("Pet Setters/getters")
+    @Severity(SeverityLevel.NORMAL)
     public void testSetGetBirthDate() {
         Pet pet = new Pet();
         LocalDate date = LocalDate.of(2020, 5, 1);
         pet.setBirthDate(date);
         assertEquals(pet.getBirthDate(), date);
     }
-    @Test
+    @Test(description = "Should set and get pet type information")
+    @Story("Pet Setters/getters")
+    @Severity(SeverityLevel.NORMAL)
     public void testSetGetType(){
         Pet pet = new Pet();
         PetType type = new PetType();
@@ -61,7 +66,9 @@ public class PetTest {
         pet.setType(type);
         assertEquals(pet.getType(), type);
     }
-    @Test
+    @Test(description = "Should set a pet to a owner and retrieve it")
+    @Story("Pet-Owner relationship")
+    @Severity(SeverityLevel.CRITICAL)
     public void testSetGetOwner(){
         Pet pet = new Pet();
         org.springframework.samples.petclinic.model.Owner owner = new Owner();
