@@ -1,5 +1,3 @@
-package org.springframework.samples.petclinic;
-
 import io.qameta.allure.*;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -7,7 +5,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
-import org.springframework.security.core.parameters.P;
 import org.testng.annotations.*;
 
 import java.time.LocalDate;

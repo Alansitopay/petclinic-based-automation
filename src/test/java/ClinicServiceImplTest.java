@@ -1,5 +1,3 @@
-package org.springframework.samples.petclinic;
-
 import io.qameta.allure.*;
 import org.mockito.*;
 import org.springframework.samples.petclinic.model.Owner;
@@ -34,4 +32,4 @@ public class ClinicServiceImplTest {
         assertNotNull(result);
         assertEquals(result.getId(), Integer.valueOf(1));
     }
-} 
+}

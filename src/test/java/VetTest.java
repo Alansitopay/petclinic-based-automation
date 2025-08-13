@@ -1,5 +1,3 @@
-package org.springframework.samples.petclinic;
-
 import io.qameta.allure.*;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -8,7 +6,6 @@ import org.springframework.samples.petclinic.model.Specialty;
 import org.springframework.samples.petclinic.model.Vet;
 import org.testng.annotations.*;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

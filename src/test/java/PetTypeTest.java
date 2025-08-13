@@ -1,5 +1,3 @@
-package org.springframework.samples.petclinic;
-
 import io.qameta.allure.*;
 import org.mockito.Mock;
 import org.mockito.Mockito;

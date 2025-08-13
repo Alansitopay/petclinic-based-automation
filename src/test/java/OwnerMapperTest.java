@@ -1,5 +1,3 @@
-package org.springframework.samples.petclinic;
-
 import io.qameta.allure.*;
 import org.springframework.samples.petclinic.mapper.OwnerMapper;
 import org.springframework.samples.petclinic.model.Owner;
@@ -23,6 +21,6 @@ public class OwnerMapperTest {
     public void testMapOwnerToDto() {
         Owner owner = new Owner();
         owner.setFirstName("John");
-        assertEquals(owner.getFirstName(), "John"); 
+        assertEquals(owner.getFirstName(), "John");
     }
-} 
+}

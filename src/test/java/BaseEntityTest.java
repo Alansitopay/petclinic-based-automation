@@ -1,5 +1,3 @@
-package org.springframework.samples.petclinic;
-
 import io.qameta.allure.*;
 import org.springframework.samples.petclinic.model.BaseEntity;
 import org.testng.annotations.*;
@@ -15,4 +13,4 @@ public class BaseEntityTest {
         entity.setId(42);
         assertEquals(entity.getId(), Integer.valueOf(42));
     }
-} 
+}

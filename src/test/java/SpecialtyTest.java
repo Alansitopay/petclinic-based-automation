@@ -1,11 +1,7 @@
-package org.springframework.samples.petclinic;
-
 import io.qameta.allure.*;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.samples.petclinic.model.PetType;
-import org.springframework.samples.petclinic.model.Role;
 import org.springframework.samples.petclinic.model.Specialty;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
