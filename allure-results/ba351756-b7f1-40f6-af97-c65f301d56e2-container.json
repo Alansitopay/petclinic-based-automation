@@ -1,0 +1,1 @@
+{"uuid":"ba351756-b7f1-40f6-af97-c65f301d56e2","name":"VetTest.setUp","children":["508ad8ea-8e2f-405c-99ab-60c3f91ef1ca"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129780912,"stop":1755129780912}],"afters":[],"start":1755129780912,"stop":1755129780912}

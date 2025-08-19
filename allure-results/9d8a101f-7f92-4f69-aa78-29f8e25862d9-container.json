@@ -1,0 +1,1 @@
+{"uuid":"9d8a101f-7f92-4f69-aa78-29f8e25862d9","name":"RoleTest.setUp","children":["e48bb969-345e-42cc-9e05-0a3b4dab1c3d"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129780967,"stop":1755129780987}],"afters":[],"start":1755129780967,"stop":1755129780987}

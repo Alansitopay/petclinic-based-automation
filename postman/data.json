@@ -1,0 +1,16 @@
+[
+  {
+    "firstName": "Juan",
+    "lastName": "Carlos",
+    "address": "123 calle calle",
+    "city": "Montevideo",
+    "telephone": "1112223333"
+  },
+  {
+    "firstName": "Carla",
+    "lastName": "Juana",
+    "address": "321 calle calle",
+    "city": "La paz",
+    "telephone": "4445556666"
+  }
+]
