@@ -17,7 +17,11 @@ public class VisitApiTest extends Base {
 
     @Test
     public void createVisit() {
-        String body = "{\"date\":\"2024-01-01\",\"description\":\"revision\",\"petId\": 1 }";
+        String body = "{\"" +
+            "date\":\"2024-01-01\"," +
+            "\"description\":\"revision\"," +
+            "\"petId\": 1 " +
+            "}";
 
         given()
             .contentType(ContentType.JSON)
