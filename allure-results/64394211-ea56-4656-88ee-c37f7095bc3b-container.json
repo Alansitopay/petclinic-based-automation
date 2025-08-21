@@ -1,0 +1,1 @@
+{"uuid":"64394211-ea56-4656-88ee-c37f7095bc3b","name":"ServicesApi.VetApiTest","children":["ba980e60-d3cf-4416-a1cf-6ae2575df9a6"],"befores":[{"name":"config","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755803560347,"stop":1755803560610}],"afters":[],"start":1755803560324,"stop":1755803561274}
