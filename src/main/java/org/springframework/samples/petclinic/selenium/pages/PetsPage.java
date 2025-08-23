@@ -37,11 +37,11 @@ public class PetsPage {
     }
 
     public void clickSaveButton(){
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
+        driver.findElement(By.className("button-primary")).click();
     }
 
     public void clickCancelButton(){
-        driver.findElement(By.cssSelector("button[type='button']")).click();
+        driver.findElement(By.id("pet-form-cancel")).click();
     }
 
     public void clickEditPet (String petName){
