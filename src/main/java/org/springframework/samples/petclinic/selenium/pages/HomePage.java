@@ -10,4 +10,12 @@ public class HomePage extends BasePage{
     public HomePage (WebDriver driver){
         this.driver = driver;
     }
+    public void clickLink(String tabName){
+        driver.findElement(By.linkText(tabName)).click();
+    }
+
+    public OwnerPage clickOwnerPage (){
+        clickLink("Owners");
+        return new OwnerPage(driver);
+    }
 }

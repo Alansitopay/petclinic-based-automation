@@ -1,6 +1,7 @@
 package ServicesApi;
 
 import io.restassured.RestAssured;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.samples.petclinic.selenium.pages.HomePage;
@@ -9,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 public class Base {
     protected WebDriver driver;
     protected HomePage homePage;
+
     @BeforeClass
     public void config (){
         driver = new ChromeDriver();
@@ -16,5 +18,8 @@ public class Base {
         RestAssured.baseURI = "http://localhost:9966";
         RestAssured.basePath = "/petclinic/api";
         homePage = new HomePage(driver);
+        driver.findElement(By.id("login-username")).sendKeys("user");
+        driver.findElement(By.id("login-password")).sendKeys("password");
+        driver.findElement(By.id("login-btn")).click();
     }
 }
