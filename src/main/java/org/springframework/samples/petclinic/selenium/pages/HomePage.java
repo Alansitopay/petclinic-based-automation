@@ -26,4 +26,9 @@ public class HomePage extends BasePage{
         clickLink("Visits");
         return new VisitsPage(driver);
     }
+
+    public PetTypes clickPetTypes(){
+        clickLink("Pet Types");
+        return new PetTypes(driver);
+    }
 }
