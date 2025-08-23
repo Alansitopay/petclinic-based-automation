@@ -46,7 +46,8 @@ public class VisitsPage {
         driver.findElement(By.xpath("//tr[td[text()='" + id + "']]//button[contains(@class,'action-btn')]")).click();
     }
     public void clickSave(){
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
+        WebElement boton = driver.findElement(By.cssSelector("button[type='submit']"));
+        boton.click();
     }
     public void clickCancel(){
         driver.findElement(By.id("visit-form-cancel"));
