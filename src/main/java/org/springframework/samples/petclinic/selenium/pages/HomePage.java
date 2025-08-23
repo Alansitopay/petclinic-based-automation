@@ -1,8 +1,6 @@
 package org.springframework.samples.petclinic.selenium.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage{
     private WebDriver driver;
@@ -17,5 +15,10 @@ public class HomePage extends BasePage{
     public OwnerPage clickOwnerPage (){
         clickLink("Owners");
         return new OwnerPage(driver);
+    }
+
+    public PetsPage clickPetsPage(){
+        clickLink("Pets");
+        return new PetsPage(driver);
     }
 }
