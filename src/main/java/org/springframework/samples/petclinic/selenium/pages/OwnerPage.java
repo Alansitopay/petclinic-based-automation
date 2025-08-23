@@ -3,6 +3,7 @@ package org.springframework.samples.petclinic.selenium.pages;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +13,11 @@ public class OwnerPage {
     public OwnerPage(WebDriver driver) {
         this.driver = driver;
     }
-    List<String>nombres = new ArrayList<>();
 
-    public List<String> listOwnersNames(){
-        nombres.add(driver.findElement(By.xpath("//tr/td[2]")).getText());
-        return nombres;
+
+    public List<WebElement> listOwnersNames(){
+        List<WebElement> firstNames = driver.findElements(By.xpath("//tr/td[2]"));
+        return firstNames;
     }
 
     public void fillForm (String firstName, String lastName, String address, String city, String telephone){
