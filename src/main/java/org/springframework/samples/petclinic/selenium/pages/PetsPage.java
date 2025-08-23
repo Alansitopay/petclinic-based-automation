@@ -17,10 +17,10 @@ public class PetsPage {
         this.driver=driver;
     }
 
-    public void fillFrom (String petName, Integer birth_yyyy, Integer birth_mm, Integer birth_dd, String ownerId, String petType){
+    public void fillFrom (String petName, Integer birth_dd, Integer birth_mm, Integer birth_yyyy, String ownerId, String petType){
         WebElement birthDate = driver.findElement(By.cssSelector("input[type='date'][name='birthDate']"));
         LocalDate fecha = LocalDate.of(birth_yyyy, birth_mm, birth_dd);
-        String valor = fecha.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String valor = fecha.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
         WebElement petTypeSelect = driver.findElement(By.id("pet-type-select"));
         Select select = new Select(petTypeSelect);
@@ -28,7 +28,7 @@ public class PetsPage {
         driver.findElement(By.name("name")).sendKeys(petName);
         birthDate.sendKeys(valor);
         driver.findElement(By.name("ownerId")).sendKeys(ownerId);
-        select.selectByValue(petType);
+        select.selectByVisibleText(petType);
     }
 
     public List<WebElement> listPetsNames(){
