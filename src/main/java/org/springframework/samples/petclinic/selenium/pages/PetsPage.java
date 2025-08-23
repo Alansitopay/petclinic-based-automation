@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class PetsPage {
 
@@ -28,6 +29,11 @@ public class PetsPage {
         birthDate.sendKeys(valor);
         driver.findElement(By.name("ownerId")).sendKeys(ownerId);
         select.selectByValue(petType);
+    }
+
+    public List<WebElement> listPetsNames(){
+        List<WebElement> names = driver.findElements(By.xpath("//tr/td[2]"));
+        return names;
     }
 
     public void clickSaveButton(){
