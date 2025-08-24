@@ -1,3 +1,5 @@
+package BackendLogicTests;
+
 import io.qameta.allure.*;
 
 @Epic("User Service")

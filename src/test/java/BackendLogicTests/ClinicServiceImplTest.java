@@ -1,3 +1,5 @@
+package BackendLogicTests;
+
 import io.qameta.allure.*;
 import org.mockito.*;
 import org.springframework.samples.petclinic.model.Owner;

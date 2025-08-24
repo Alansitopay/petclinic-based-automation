@@ -1,3 +1,5 @@
+package BackendLogicTests;
+
 import io.qameta.allure.*;
 import org.mockito.Mock;
 import org.mockito.Mockito;

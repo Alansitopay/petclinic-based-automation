@@ -1,3 +1,5 @@
+package BackendLogicTests;
+
 import io.qameta.allure.*;
 import org.springframework.samples.petclinic.model.BaseEntity;
 import org.testng.annotations.*;

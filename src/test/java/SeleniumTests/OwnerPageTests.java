@@ -23,9 +23,9 @@ public class OwnerPageTests extends Base {
         ownerPage.fillForm("Alfonsico","robertico","calle123","ciudad","1234567890");
         ownerPage.clickSaveButton();
         int sizeInicial = ownerPage.listOwnersNames().size();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         ownerPage.clickDeleteOwnerAccept("Alfonsico");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         int sizeFinal = ownerPage.listOwnersNames().size();
         Assert.assertTrue(sizeFinal<sizeInicial);
     }
