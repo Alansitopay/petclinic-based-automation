@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class VisitsPage {
-    private WebDriver driver;
+    protected WebDriver driver;
 
     public VisitsPage(WebDriver driver) {
         this.driver = driver;

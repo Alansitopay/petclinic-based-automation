@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class PetTypes {
     private WebDriver driver;
@@ -20,6 +21,11 @@ public class PetTypes {
 
     public void fillForm(String name){
         driver.findElement(By.name("name")).sendKeys(name);
+    }
+
+    public List<WebElement> listPetTypes(){
+        List<WebElement> types = driver.findElements(By.xpath("//tr/td[2]"));
+        return types;
     }
     public void clickSaveButton(){
         driver.findElement(By.cssSelector("button[type='submit']"));
