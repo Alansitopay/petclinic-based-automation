@@ -1,1 +1,0 @@
-{"uuid":"287a4ba4-d884-4c5e-a67a-e0a64b9d62b2","name":"ClinicServiceImplTest.setUp","children":["40b264ff-16ee-41fd-9fc3-10d3c0e841b5"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129781210,"stop":1755129781284}],"afters":[],"start":1755129781210,"stop":1755129781284}

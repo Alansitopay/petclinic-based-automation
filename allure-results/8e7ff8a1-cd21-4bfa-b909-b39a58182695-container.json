@@ -1,1 +1,0 @@
-{"uuid":"8e7ff8a1-cd21-4bfa-b909-b39a58182695","name":"PetTypeTest.tearDown","children":["e1ef7d94-20c6-4c33-841a-59f528ba22b3"],"description":"","befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129781183,"stop":1755129781183}],"start":1755129781183,"stop":1755129781183}

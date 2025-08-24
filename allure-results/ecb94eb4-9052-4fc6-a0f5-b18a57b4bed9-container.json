@@ -1,1 +1,0 @@
-{"uuid":"ecb94eb4-9052-4fc6-a0f5-b18a57b4bed9","name":"PetTypeTest.setUp","children":["223ed6ca-ee8e-409b-9832-819a913de010"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129597919,"stop":1755129597930}],"afters":[],"start":1755129597919,"stop":1755129597930}

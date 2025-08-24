@@ -1,1 +1,0 @@
-{"uuid":"d59afdec-0afa-4789-af7f-e07c5d4bd273","name":"SpecialtyTest.tearDown","children":["5117828e-a89e-4a52-a5b1-67c39b73a3ee"],"description":"","befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129597952,"stop":1755129597952}],"start":1755129597951,"stop":1755129597952}

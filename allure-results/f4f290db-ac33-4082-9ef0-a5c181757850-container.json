@@ -1,1 +1,0 @@
-{"uuid":"f4f290db-ac33-4082-9ef0-a5c181757850","name":"SpecialtyTest.setUp","children":["963706e0-5970-41cb-bb8b-6e9fc5e202bd"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129781185,"stop":1755129781186}],"afters":[],"start":1755129781185,"stop":1755129781186}

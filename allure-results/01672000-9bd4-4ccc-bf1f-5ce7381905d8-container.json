@@ -1,1 +1,0 @@
-{"uuid":"01672000-9bd4-4ccc-bf1f-5ce7381905d8","name":"SeleniumTests.PetsPageTest","children":["ca7ca52a-be31-4430-a857-9b99ff8d25ca"],"befores":[{"name":"config","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755956408484,"stop":1755956409999}],"afters":[],"start":1755956408463,"stop":1755956410363}

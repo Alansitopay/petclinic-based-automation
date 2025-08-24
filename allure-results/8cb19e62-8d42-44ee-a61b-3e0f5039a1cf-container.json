@@ -1,1 +1,0 @@
-{"uuid":"8cb19e62-8d42-44ee-a61b-3e0f5039a1cf","name":"ServicesApi.SpecialtyApiTest","children":["29ed95f9-26c5-4ef1-bcf8-bc6b3625e330"],"befores":[{"name":"config","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755803576087,"stop":1755803576344}],"afters":[],"start":1755803576064,"stop":1755803577384}

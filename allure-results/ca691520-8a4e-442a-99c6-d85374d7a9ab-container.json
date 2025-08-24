@@ -1,1 +1,0 @@
-{"uuid":"ca691520-8a4e-442a-99c6-d85374d7a9ab","name":"VetTest.tearDown","children":["b980f67b-68c3-44cc-8fb7-5e68f16f2f4a"],"description":"","befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129597714,"stop":1755129597714}],"start":1755129597714,"stop":1755129597714}

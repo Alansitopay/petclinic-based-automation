@@ -1,1 +1,0 @@
-{"uuid":"e69b4b82-d390-4108-9ceb-ae08144053ab","name":"PersonTest.setUp","children":["6e8d66fe-cf17-4dcd-9885-dc1bc76b5990"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755129781152,"stop":1755129781152}],"afters":[],"start":1755129781152,"stop":1755129781152}
