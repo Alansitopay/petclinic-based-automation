@@ -1,11 +1,12 @@
 package SeleniumTests;
 
 import ServicesApi.Base;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.WebElement;
 import org.springframework.samples.petclinic.selenium.pages.PetsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+@Feature("Pets selenium tests")
 public class PetsPageTest extends Base {
     @Test
     public void validListPets () throws InterruptedException {

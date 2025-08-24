@@ -1,11 +1,13 @@
 package SeleniumTests;
 
 import ServicesApi.Base;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.WebElement;
 import org.springframework.samples.petclinic.selenium.pages.OwnerPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+@Feature("Owner selenium tests")
 public class OwnerPageTests extends Base {
 
     @Test
